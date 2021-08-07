@@ -12,7 +12,8 @@ Widget node(BuildContext context ,String name, int depth){
         key: Key(name),
         builder: (key, o, child){
 
-        bool hasChildren = o.objects[name].hasChildren;
+
+          bool hasChildren = o.objects.keys.length == 1 ? false : o.objects[name].hasChildren;
 
         return AnimatedContainer(
 
@@ -23,10 +24,15 @@ Widget node(BuildContext context ,String name, int depth){
           child: InkWell(
 
             onTap: (){
+
               if(hasChildren){
+
                 Provider.of<InputNotifier>(context, listen : false).expandToggle(context,depth,name);
+
               }else{
+
                 Provider.of<InputNotifier>(context, listen : false).setSelectedChild(name);
+
               }
 
             },

@@ -98,7 +98,6 @@ class InputNotifier extends ChangeNotifier{
 
     recursive(_rawValue,0,"");
 
-
     makeWidget(context,0, widgets.keys.first);
 
 
@@ -210,8 +209,7 @@ class InputNotifier extends ChangeNotifier{
   void recursive(Map<String,dynamic> map, int  _depth, String parent){
 
 
-
-    if(map.length == 2){
+   if(map.length == 2){
 
       List<dynamic> list = map["children"];
 
@@ -251,7 +249,12 @@ class InputNotifier extends ChangeNotifier{
 
       }else{
 
-        widgets[parent] = [map["name"]];
+
+        if(parent == ""){
+          widgets[map["name"]] = "";
+        }else{
+          widgets[parent] = [map["name"]];
+        }
 
       }
 
