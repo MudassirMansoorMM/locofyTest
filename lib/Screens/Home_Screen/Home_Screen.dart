@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../constants.dart';
 import 'Sections/left.dart';
 import 'Sections/middle.dart';
@@ -25,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
 
+
       appBar: AppBar(
         backgroundColor: kBlue,
         elevation: 0,
@@ -37,11 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(children: [
 
 
-          leftSection(),
+          LeftSection(),
 
           MiddleSection(),
 
-          Expanded( flex: 3 , child: rightSection()),
+          RightSection(),
 
 
         ],),

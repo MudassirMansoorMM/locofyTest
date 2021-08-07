@@ -12,8 +12,8 @@ const kRed = Color(0xFFE36767);
 const kBlue = Color(0xFF17293E);
 
 
+/// Default padding
 double kPadding = 20;
-
 
 
 /// Rounded Container Properties

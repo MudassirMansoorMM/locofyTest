@@ -9,6 +9,7 @@ import 'package:testproj2/Models/TreeItemModel.dart';
 class InputNotifier extends ChangeNotifier{
 
   Map<String,dynamic> _rawValue = {};
+  Map<String,dynamic> get rawValue =>  _rawValue;
 
   List<Widget> rows = [];
 
@@ -17,7 +18,6 @@ class InputNotifier extends ChangeNotifier{
   int depth = 0;
 
   Map<String,dynamic> widgets = {};
-  Map<String,dynamic> get rawValue =>  _rawValue;
 
   String selectedNode = "";
 

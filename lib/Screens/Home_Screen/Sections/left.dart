@@ -7,9 +7,9 @@ import '../../../constants.dart';
 
 
 
-class leftSection extends StatelessWidget{
+class LeftSection extends StatelessWidget{
 
-  TextEditingController controller = TextEditingController();
+  final TextEditingController controller = TextEditingController();
 
 
   @override
