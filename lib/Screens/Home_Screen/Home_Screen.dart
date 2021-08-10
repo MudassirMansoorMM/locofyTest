@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: kBlue,
         elevation: 0,
         centerTitle: false,
-        title: Text("CodingChallenge",style: TextStyle(color: kPrimary),),
+        title: Text("Coding Challenge",style: TextStyle(color: kPrimary, fontStyle: FontStyle.italic),),
       ),
 
       body: Container(

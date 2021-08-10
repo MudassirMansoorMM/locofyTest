@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testproj2/ChangeNotifiers/InputNotifier.dart';
+import 'package:testproj2/config.dart';
 import '../../../constants.dart';
 
 
@@ -27,7 +28,8 @@ class MiddleSection extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Text( "Enter valid json below : ",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold
+                        fontWeight: FontWeight.bold,
+                      fontSize: SizeConfig.height * 2.4
                     )),
               ),
 

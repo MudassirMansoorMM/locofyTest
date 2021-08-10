@@ -23,9 +23,12 @@ class LeftSection extends StatelessWidget{
             flex: 4,
             child: Container(
                height: SizeConfig.height * 100,
+
               color: kText,
               child: Column(
                 children: [
+
+                  SizedBox(height:kPadding/2),
 
                   /// Search Bar
                   Expanded(
@@ -40,7 +43,9 @@ class LeftSection extends StatelessWidget{
                         onChanged: (val){
                           Provider.of<InputNotifier>(context,listen: false).searchNode(val, context);
                         },
+                          maxLines: 1,
                         decoration: InputDecoration(
+                          border: InputBorder.none,
                           hintText: "Search Node",
                           hintStyle: TextStyle(color:kPrimary.withOpacity(.4))
                         )
@@ -63,9 +68,9 @@ class LeftSection extends StatelessWidget{
 
                   /// Tree Panel
                   Expanded(
-                    flex:9,
+                    flex:10,
                     child: Padding(
-                      padding: EdgeInsets.only(left:kPadding),
+                      padding: EdgeInsets.only(left:kPadding/2),
                       child: SingleChildScrollView(
 
 

@@ -27,6 +27,8 @@ class InputNotifier extends ChangeNotifier{
 
 
 
+
+
   /// Search Routine
   void searchNode(String val, BuildContext context){
 
@@ -76,6 +78,8 @@ class InputNotifier extends ChangeNotifier{
     rows = [];
     widgets = {};
 
+    depth = 0;
+    selectedNode = "";
 
     try{
 
@@ -94,7 +98,6 @@ class InputNotifier extends ChangeNotifier{
 
 
 
-    widgets = {};
 
     recursive(_rawValue,0,"");
 
@@ -214,7 +217,7 @@ class InputNotifier extends ChangeNotifier{
       List<dynamic> list = map["children"];
 
 
-      objects[map["name"]] = TreeItem(name:map["name"],hasChildren: true, depth: _depth, isExpanded: false,children: [],parent:"");
+      objects[map["name"]] = TreeItem(name:map["name"],hasChildren: true, depth: _depth, isExpanded: false,children: [],parent:parent);
 
 
       _depth = _depth + 1;
